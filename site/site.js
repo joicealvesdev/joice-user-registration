@@ -1,4 +1,14 @@
-let nome = document.getElementById('input#username')
-let email = document.getElementById('input#email')
+const form = document.getElementById("form");
+const senha = document.getElementById("senha");
+const confirmar = document.getElementById("confirmar");
 
-function cadastro ()
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  if (senha.value !== confirmar.value) {
+    alert("As senhas não coincidem!");
+    return;
+  }
+
+  alert("Cadastro realizado com sucesso!");
+});
